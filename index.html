@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For You ❤️</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<audio id="bgMusic" loop>
+    <source src="music-a.mp3" type="audio/mpeg">
+</audio>
+<audio id="bgMusic" loop>
+    <source src="music-b.mp3" type="audio/mpeg">
+</audio>
+
+<nav class="hidden" id="navbar">
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('gallery')">Gallery</a>
+    <a onclick="showSection('letter')">Letter</a>
+    <a onclick="showSection('bucket')">Bucket List</a>
+</nav>
+
+<div class="container">
+
+    <!-- Landing -->
+    <div id="question">
+        <h1>Will you be my Valentine? ❤️</h1>
+        <p class="subtitle">A very important question awaits you...</p>
+
+        <div class="buttons">
+            <button class="yes" onclick="sayYes()" id="yesBtn">Yes 💖</button>
+            <button class="no" id="noButton">No</button>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div id="main" class="hidden">
+
+        <section id="home" class="section">
+    <div class="home-bg"></div> <!-- background image layer -->
+    <h1>Yay!!!</h1>
+    <p>My valentine bubu babyyyyyy.</p>
+</section>
+
+        <section id="gallery" class="hidden">
+            <h1>Our Small World</h1>
+
+            <div class="carousel">
+                <div class="slides">
+                    <img src="photo-1.jpg">
+                    <img src="photo-2.jpg">
+                    <img src="photo-3.jpg">\
+   		    <img src="photo-4.jpg">
+<img src="photo-5.jpg">
+<img src="photo-6.jpg">
+<img src="photo-7.jpg">
+<img src="photo-8.jpg">
+<img src="photo-9.jpg">
+<img src="photo-10.jpg">
+<img src="photo-11.jpg">
+<img src="photo-12.jpg">
+<img src="photo-13.jpg">
+<img src="photo-14.jpg">
+<img src="photo-15.jpg">
+<img src="photo-16.jpg">
+<img src="photo-17.jpg">
+<img src="photo-18.jpg">
+<img src="photo-19.jpg">
+<img src="photo-20.jpg">
+<img src="photo-21.jpg">
+<img src="photo-22.jpg">
+<img src="photo-23.jpg">
+<img src="photo-24.jpg">
+<img src="photo-25.jpg">
+<img src="photo-26.jpg">
+<img src="photo-27.jpg">
+<img src="photo-28.jpg">
+<img src="photo-29.jpg">
+<img src="photo-30.jpg">
+<img src="photo-31.jpg">
+<img src="photo-32.jpg">
+<img src="photo-33.jpg">
+<img src="photo-34.jpg">
+<img src="photo-35.jpg">
+<img src="photo-36.jpg">
+<img src="photo-37.jpg">
+<img src="photo-38.jpg">
+<img src="photo-39.jpg">
+<img src="photo-40.jpg">
+<img src="photo-41.jpg">
+<img src="photo-42.jpg">
+<img src="photo-43.jpg">
+<img src="photo-44.jpg">
+<img src="photo-45.jpg">
+<img src="photo-46.jpg">
+<img src="photo-47.jpg">
+<img src="photo-48.jpg">
+<img src="photo-49.jpg">
+<img src="photo-50.jpg">
+<img src="photo-51.jpg">
+<img src="photo-52.jpg">
+<img src="photo-53.jpg">
+<img src="photo-54.jpg">
+<img src="photo-55.jpg">
+<img src="photo-56.jpg">
+<img src="photo-57.jpg">
+<img src="photo-58.jpg">
+<img src="photo-59.jpg">
+<img src="photo-60.jpg">
+
+
+ <video class="carousel-video" muted playsinline preload="auto" controls>
+	    <source src="video-1.mp4" type="video/mp4">
+        </video>
+<video class="carousel-video" muted playsinline preload="auto" controls>
+	    <source src="video-2.mp4" type="video/mp4">
+        </video>
+<img src="photo-0.jpg">
+                </div>
+
+                <button class="prev" onclick="changeSlide(-1)">❮</button>
+                <button class="next" onclick="changeSlide(1)">❯</button>
+            </div>
+        </section>
+
+        <section id="letter" class="hidden">
+            <h1>Letter to loml </h1>
+
+         
+
+            <p class="letter">
+                Dear wifey bubu,
+                <br>My baby smolu chan, thankyou for coming to my life and making my life brighter.
+                I will always be grateful to you my bubu chan and hope we can spend the rest of our lifes together like how we are right now.
+                I cherish every memory we have created together and cheers to many memories we will make! <3 <3
+                Also I am so so proud of you my bubu, my bubu has worked so much and will achieve so much greatness.
+                Always remember, you have me every moment you need to bounce back from ze any setbacks bubu.
+                Also, I have your softie bubu to bounce back hehe.
+            </p>
+
+            <div class="reply">
+                <h3>Reply</h3>
+                <textarea placeholder="Write your reply here..."></textarea>
+                <button class="send">Send </button>
+            </div>
+        </section>
+
+        <section id="bucket" class="hidden">
+            <h1>Our Bucket List</h1>
+
+            <ul id="bucketList">
+                <li><input type="checkbox"> Travel the world(More trips we need)</li>
+                <li><input type="checkbox"> Pets</li>
+                <li><input type="checkbox"> Our own small Home</li>
+                <li><input type="checkbox"> Cuddles</li>
+                <li><input type="checkbox"> Kissies</li>
+            </ul>
+
+            <div class="add-item">
+                <input type="text" id="newItem" placeholder="Add new dream...">
+                <button onclick="addItem()">Add</button>
+            </div>
+
+        </section>
+
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+let noButton = document.getElementById("noButton");
+let escapeCount = 0;
+let noTexts = ["Really?", "Are you sure?", "Think again 😏", "There is no 'No' option"];
+
+function moveButton() {
+    let x = Math.random() * 300 - 150;
+    let y = Math.random() * 200 - 100;
+    noButton.style.transform = `translate(${x}px, ${y}px)`;
+}
+
+noButton.addEventListener("click", () => {
+    moveButton();
+    if (escapeCount < noTexts.length) {
+        noButton.innerText = noTexts[escapeCount];
+    }
+    escapeCount++;
+
+    if (escapeCount === noTexts.length) {
+        setTimeout(() => {
+            location.reload();
+        }, 1500);
+    }
+});
+
+function sayYes() {
+
+    document.getElementById("question").classList.add("hidden");
+    document.getElementById("main").classList.remove("hidden");
+    document.getElementById("navbar").classList.remove("hidden");
+
+    document.getElementById("bgMusic").play();
+
+    // 🎉 CONFETTI STARTS HERE
+    const duration = 2000;
+    const end = Date.now() + duration;
+
+    (function frame() {
+        confetti({
+            particleCount: 6,
+            angle: 60,
+            spread: 80,
+            origin: { x: 0 }
+        });
+
+        confetti({
+            particleCount: 6,
+            angle: 120,
+            spread: 80,
+            origin: { x: 1 }
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    })();
+}
+
+function showSection(id) {
+    document.querySelectorAll("#main section").forEach(sec =>
+        sec.classList.add("hidden")
+    );
+    document.getElementById(id).classList.remove("hidden");
+}
+
+/* ===== SMART IMAGE + VIDEO CAROUSEL ===== */
+
+const slidesContainer = document.querySelector(".slides");
+const slides = document.querySelectorAll(".slides > *");
+const videos = document.querySelectorAll(".slides video");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+let currentIndex = 0;
+let autoSlideTimer;
+const slideInterval = 4000;
+
+/* Move Slide */
+function goToSlide(index) {
+  currentIndex = index;
+  slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+  handleMedia();
+}
+
+/* Handle Video / Image Behavior */
+function handleMedia() {
+
+  // Pause & reset all videos first
+  videos.forEach(video => {
+    video.pause();
+    video.currentTime = 0;
+  });
+
+  const activeSlide = slides[currentIndex];
+
+  if (activeSlide.tagName === "VIDEO") {
+    clearInterval(autoSlideTimer);
+
+    activeSlide.play().then(() => {
+      console.log("Video autoplay started");
+    }).catch(err => {
+      console.log("Autoplay blocked:", err);
+    });
+
+  } else {
+    startAutoSlide();
+  }
+}
+
+/* Auto Slide (Images Only) */
+function startAutoSlide() {
+  clearInterval(autoSlideTimer);
+
+  autoSlideTimer = setInterval(() => {
+
+    const activeSlide = slides[currentIndex];
+
+    if (activeSlide.tagName === "VIDEO") return;
+
+    nextSlide();
+
+  }, slideInterval);
+}
+
+/* Next / Prev */
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % slides.length;
+  goToSlide(currentIndex);
+}
+
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  goToSlide(currentIndex);
+}
+
+/* When Video Ends → Move Next */
+videos.forEach(video => {
+  video.addEventListener("ended", () => {
+    nextSlide();
+  });
+});
+
+/* Buttons */
+nextBtn.addEventListener("click", () => {
+  nextSlide();
+});
+
+prevBtn.addEventListener("click", () => {
+  prevSlide();
+});
+
+/* Init */
+goToSlide(0);
+startAutoSlide();
+
+
+
+/* Add Bucket Item */
+function addItem() {
+    let input = document.getElementById("newItem");
+    if (input.value.trim() === "") return;
+
+    let li = document.createElement("li");
+    li.innerHTML = `<input type="checkbox"> ${input.value}`;
+    document.getElementById("bucketList").appendChild(li);
+    input.value = "";
+}
+</script>
+
+</body>
+</html>
